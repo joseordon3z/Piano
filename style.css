@@ -51,6 +51,20 @@ body {
     font-size: 1.6rem;
 }
 
+header div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header div span {
+    font-size: 1.6rem;
+}
+
+.volume-slider input {
+    accent-color: white;
+}
+
 .piano-keys {
     display: flex;
     margin: 0;
@@ -71,6 +85,12 @@ body {
     height: 205px;
     border-radius: 8px;
     border: 1px solid black;
+    transition: 0.3s ease all;
+}
+
+.piano-keys .white.active {
+    box-shadow: var(--active-white-box-shadow);
+    background: var(--active-white-linear-gradient);
 }
 
 .piano-keys .black {
@@ -81,6 +101,12 @@ body {
     border-bottom-right-radius: 5px;
     margin: 0 -20px;
     z-index: 2;
+    transition: 0.3s ease all;
+}
+
+.piano-keys .black.active {
+    box-shadow: var(--active-black-box-shadow);
+    background: var(--active-black-linear-gradient);
 }
 
 .piano-keys div {
